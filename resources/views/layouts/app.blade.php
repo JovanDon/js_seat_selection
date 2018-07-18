@@ -119,7 +119,7 @@ $("button.btn-square").click(function(){
     var cureent_color_to_hex=rgb2hex(current_color);
     var color=selectColor(choices_array.length);
 
-    if(cureent_color_to_hex=="#f8f9fa" && choises_are_not_three() ){//adds choice      
+    if(cureent_color_to_hex=="#f8f9fa" && choises_are_not_exceeded() ){//adds choice      
         $(this).css('background-color', color);
         
         choices_array.push($(this).prop("id") );
@@ -135,8 +135,8 @@ $("button.btn-square").click(function(){
    
 });
 
-function choises_are_not_three(){
-    if(choices_array.length>=3){
+function choises_are_not_exceeded(){
+    if(choices_array.length>=4){
         return false;
     }
     
@@ -158,6 +158,8 @@ function selectColor(index){
         return "Orange";
     }else if(index==2){
         return "red";
+    }else if(index==3){
+        return "pink";
     }
 }
 
