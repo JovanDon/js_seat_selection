@@ -109,7 +109,25 @@ $(document).ready(function () {
 
  <!-- select2 JavaScript -->
 <script type="text/javascript" src="{{ asset('select2-4.0.6/dist/js/select2.min.js') }}"></script>
+<script>
 
+$(
+    function(){
+
+        $("#selectall").click(function(){
+            
+        if( $(this).prop('checked')===true ){
+            $(".city_checkbox").prop('checked',true);
+        }else{
+            $(".city_checkbox").prop('checked',false);
+        }
+        
+        });
+
+    }
+);
+
+</script>
 
 <script>
    var choices_array=[];

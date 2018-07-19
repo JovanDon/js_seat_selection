@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/radio_check', function () {
+    return view('select_all_js.radio_checkbox');
+});
+
+Route::get('/radio_check2', function () {
+    return view('select_all_js.radio_checkbox2');
+});
+Route::post('/radio_check', 'RadioController@index');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -51,6 +61,3 @@ Route::post('/edittown_action', 'TownsController@update_town');
 Route::post('/addtown_action', 'TownsController@create_town');
 Route::post('/deletetown_action', 'TownsController@delete_town');
  
-
-
-
