@@ -51,6 +51,9 @@
                                 <li class="nav-item">
                                 <a class="nav-link" href="{{ URL::to('routelist') }}">routes</a>
                                 </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="{{ URL::to('townlist') }}">towns</a>
+                                </li>
                    
                    
                     <!-- Right Side Of Navbar -->

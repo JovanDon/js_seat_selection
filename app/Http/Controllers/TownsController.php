@@ -4,11 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\business_logic\TownsLogic;
+use Artisan;
 
 class TownsController extends Controller
 {
     public function index()
     {
+        $exitCode = Artisan::call('email:send', [
+            'user_lname' => 'mutesasira', 'user_fname' => 'jovan'
+        ]);
+        
+        dd($exitCode);
+
         $logicManager=new TownsLogic();
         $towns=$logicManager->index();
         $i=1;
